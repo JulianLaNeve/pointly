@@ -12,6 +12,20 @@ Template.adminDashboard.events({
 		var name = $('#name').val();
 		var desc = $('#desc').val();
 		var points = $('#points').val();
-		console.log(name);
+		
+
+	},
+	'click .user': function(e) {
+		Session.set('viewing', e.target.id);
+	}
+})
+
+Template.adminDashboard.helpers({
+	'users': function() {
+		var email = Meteor.user().profile.email;
+		return Meteor.users.find({"profile.adminEmail": email});
+	},
+	'confirm': function() {
+		return Lists.find({owner: Session.get('viewing')}).fetch()[0].lists;
 	}
 })

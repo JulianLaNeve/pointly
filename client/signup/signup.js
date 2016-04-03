@@ -67,19 +67,7 @@ Template.signup.events({
 				}
 			};
 		});
-
-		if (!isAdmin) {
-
-			ownerId = Meteor.userId();
-			adminId = Meteor.users.findOne({ "profile.email": adminEmail })._id;
-			Lists.insert({
-				owner: ownerId,
-				admin: adminId,
-				lists: [],
-				rewards: []
-			});
-		}
-
+		Meteor.loginWithPassword(email, password);
 		Router.go('/dashboard')
 	},
 	'change #admin': function(e) {

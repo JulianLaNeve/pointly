@@ -1,9 +1,9 @@
 Template.dashboard.helpers({
 	'admin': function() {
-		return true;
+		return Meteor.user().profile.role == 'admin';
 	},
 	'user': function() {
-		return false;
+		return Meteor.user().profile.role == 'user';
 	}
 })
 
