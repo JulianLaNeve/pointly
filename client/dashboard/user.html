@@ -1,5 +1,5 @@
 <template name="userDashboard">
-	<div class="__user">
+	<div class="__admin">
 		<div class="container">
 			<div class="row heading">
 				<img src="/pic.png" alt="profile pic" class="circle profile">
@@ -12,22 +12,56 @@
 					</ul>
 					<!-- BEGIN TASKS CODE -->
 					<div id="tasks" class="col s12">
-						
+
+						<!-- BEGIN NEEDS TO BE CONFIRMED -->
+						<h4 class="subheader center-align">
+							Ready for Confirmation
+						</h4>
 						<ul class="collapsible" data-collapsible="accordion">
-							<li>
-								<div class="collapsible-header">Do the dishes</div>
+							<li class="confirm">
+								<div class="collapsible-header">Do the dishes <span class="points right">20 pts</span></div>
 								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
 							</li>
 							<li>
-								<div class="collapsible-header">Wash the car</div>
+								<div class="collapsible-header">Wash the car <span class="points right">30 pts</span></div>
 								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
 							</li>
 							<li>
-								<div class="collapsible-header">Take the dog out</div>
+								<div class="collapsible-header">Take the dog out <span class="points right">10 pts</span></div>
 								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
 							</li>
 						</ul>
-						
+						<!-- ENDS NEEDS TO BE CONFIRMED -->
+						<br>
+						<h4 class="subheader center-align">
+							Waiting for Completion
+						</h4>
+						<ul class="collapsible" data-collapsible="accordion">
+							<li class="confirm">
+								<div class="collapsible-header">Do the dishes <span class="points right">20 pts</span></div>
+								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+							</li>
+							<li>
+								<div class="collapsible-header">Wash the car <span class="points right">30 pts</span></div>
+								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+							</li>
+							<li>
+								<div class="collapsible-header">Take the dog out <span class="points right">10 pts</span></div>
+								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+							</li>
+							<li class="confirm">
+								<div class="collapsible-header">Do the dishes <span class="points right">20 pts</span></div>
+								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+							</li>
+							<li>
+								<div class="collapsible-header">Wash the car <span class="points right">30 pts</span></div>
+								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+							</li>
+							<li>
+								<div class="collapsible-header">Take the dog out <span class="points right">10 pts</span></div>
+								<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+							</li>
+						</ul>
 					</div>
 					<!-- END TASKS CODE -->
 					<!-- BEGIN REWARDS CODE -->
@@ -38,6 +72,41 @@
 					<!-- END REWARDS CODE -->
 				</div>
 			</div>
+			<br>
+			<br>
+			<br>
 		</div>
+
+		<!--<div class="fixed-action-btn" style="bottom: 20px; right: 20px;">
+			<a class="btn-floating btn-large red">
+				<span class="plus">+</span>
+			</a>
+			<ul>
+				<li><a class="btn-floating red tooltipped modal-trigger" href="#createList" data-position="left" data-delay="50" data-tooltip="Create task"><i class="material-icons">list</i></a></li>
+				<li><a class="btn-floating red tooltipped modal-trigger" data-position="left" data-delay="50" data-tooltip="Create reward"><i class="material-icons">done</i></a></li>
+			</ul>
+		</div> 
+
+		<div id="createList" class="modal bottom-sheet">
+			<div class="modal-content">
+				<div class="row">
+					<div class="input-field col s3">
+						<input id="name" type="text" class="validate">
+						<label for="name">Task Name</label>
+					</div>
+					<div class="input-field col s7">
+						<input id="desc" type="text" class="validate">
+						<label for="desc">Description</label>
+					</div>
+					<div class="input-field col s2">
+						<input id="points" type="text" class="validate">
+						<label for="points">Point Value</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Add</a>
+			</div>
+		</div> -->
 	</div>
 </template>
