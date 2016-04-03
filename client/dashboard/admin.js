@@ -6,3 +6,12 @@ Template.adminDashboard.rendered = function() {
 	$('.tooltipped').tooltip({delay: 50});
 	$('.modal-trigger').leanModal();
 }
+
+Template.adminDashboard.events({
+	'click .addTask': function(e) {
+		var name = $('#name').val();
+		var desc = $('#desc').val();
+		var points = $('#points').val();
+		console.log(name);
+	}
+})

@@ -40,9 +40,9 @@ Template.signup.events({
 				if (isAdmin) {
 					Accounts.createUser({
 						username: first + last,
-						email: email,
 						password: password,
 						profile: {
+							email: email,
 							first: first,
 							last: last,
 							role: 'admin',
@@ -52,9 +52,9 @@ Template.signup.events({
 				} else if (!isAdmin) {
 					Accounts.createUser({
 						username: first + last,
-						email: email,
 						password: password,
 						profile: {
+							email: email,
 							first: first,
 							last: last,
 							role: 'user',
@@ -67,6 +67,18 @@ Template.signup.events({
 				}
 			};
 		});
+
+		if (!isAdmin) {
+
+			ownerId = Meteor.userId();
+			adminId = Meteor.users.findOne({ "profile.email": adminEmail })._id;
+			Lists.insert({
+				owner: ownerId,
+				admin: adminId,
+				lists: [],
+				rewards: []
+			});
+		}
 
 		Router.go('/dashboard')
 	},
