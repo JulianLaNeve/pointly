@@ -44,11 +44,21 @@
 					</div>
 				</div>
 				<p>
-			      <input type="checkbox" id="test5" />
-			      <label for="test5">I am an admin</label>
-			    </p>
-			    <div class="divider"></div>
-			    <div class="row"></div>
+					<input type="checkbox" id="admin" checked />
+					<label for="admin">I am an admin</label>
+				</p>
+				{{#if isAdmin}}
+
+				{{else}}
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="adminEmail" type="email" class="validate">
+						<label for="adminEmail">Admin Account Email Address</label>
+					</div>
+				</div>
+				{{/if}}
+				<div class="divider"></div>
+				<div class="row"></div>
 				<a style="right: 20vw; position: absolute;" class="waves-effect waves-light btn-large signUp float-right">Sign Up</a>
 			</form>
 		</div>
