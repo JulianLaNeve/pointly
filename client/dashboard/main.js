@@ -3,7 +3,7 @@ Template.dashboard.helpers({
 		return true;
 	},
 	'user': function() {
-		return true;
+		return false;
 	}
 })
 
