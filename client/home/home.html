@@ -1,65 +1,49 @@
 <template name="home">
 
 <div class="homeContainer">
+	
 	<div class="row homeMain">
 		<div class="col s12">
 			<div class="container">
-				
+				<img id="homeImage" src="http://2.bp.blogspot.com/-n1da2kDa_ZY/UXeCtSd5KJI/AAAAAAAAAMw/0ktttvBNCWU/s1600/check_box.png" align="middle">
+				<h2 class="center-align white-text" style="font-weight: 200">Get your kids to <span id="typed"></span></h2>
 			</div>
 		</div>
 	</div>
 
-  	  <div class="row homeCards">
-        <div class="col s4 offset-s1">
-          	  <div class="card medium">
-			    <div class="card-image waves-effect waves-block waves-light">
-			      <img class="activator" src="http://www.at-risk.org/blog/wp-content/uploads/teen%20privileges.jpg">
-			    </div>
-			    <div class="card-content">
-			      <span class="card-title activator grey-text text-darken-4">For User<i class="material-icons right">more_vert</i></span>
-			      <p class="activator color=blue ">Click to learn more</p>
-			    </div>
-			   <div class="card-action">
-	              <a href="\sign-up" style="color: #34495e">Sign Up</a>
-	            </div>
-			    <div class="card-reveal">
-			        <span class="card-title grey-text text-darken-4">For User<i class="material-icons right">close</i></span>
-			        <p>Here is some more information about this product that is only revealed once clicked on.</p>
 
-				    <div class="card-action">
-		              <a href="\sign-up" style="color: #34495e">Sign Up</a>
-		            </div>
-			    </div>
+	<div class="row"></div>
+	<div class="row homeDescription">
+		<div class="col s12">
+			<h4 class="center-align" style="padding: 0px; margin: 15px; font-weight: 500;">A Fun And Effective Task Manager</h4>
+		</div>
+		<div class="col s10 offset-s1">
+			<p style="font-weight: 300; font-size: 20px; padding: 0px; margin: 0px" class="center-align">Pointly is an application that allows administrators to set tasks for their users, with a certain point value awarded when that task is completed. Users are incentivized to complete their tasks in order to add up their points and get rewards!</p>
+		</div>
+	</div>
 
-			  </div>
-        </div>
-       
-        <div class="col s4 offset-s2">
-             <div class="card medium">
-			    <div class="card-image waves-effect waves-block waves-light">
-			      <img class="activator" src="https://bhi61nm2cr3mkdgk1dtaov18-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/parent-photo.jpg">
-			    </div>
-			    <div class="card-content">
-			      <span class="card-title activator grey-text text-darken-4">For Admins<i class="material-icons right">more_vert</i></span>
-			      <p class="activator color=blue ">Click to learn more</p>
-			    </div>
-			   <div class="card-action">
-	              <a href="\sign-up" style="color: #34495e">Sign Up</a>
-	            </div>
-			    <div class="card-reveal">
-			        <span class="card-title grey-text text-darken-4">For Admins<i class="material-icons right">close</i></span>
-			        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+	<div class="row"></div>
+	<div class="row"></div>
 
-				    <div class="card-action">
-		              <a href="\sign-up" style="color: #34495e">Sign Up</a>
-		            </div>
-			    </div>
+	<div class="row">
+		<div class="col s6 center-align" style="border-right: 1px solid" >
+			<div class="container">
+				<h5 style="font-weight: 500;">For Users</h5>
+				<p style="font-weight: 300">Users, such as children, students, or even employees, work to complete tasks in order to gain points. Their administrators give them a promised reward after they earn a certain number of points.
+				</p>
+				<a href="/sign-up" class="btn">Become a User</a>
+			</div>
+		</div>
+		<div class="col s6 center-align">
+			<div class="container">
+				<h5 style="font-weight: 500">For Admins</h5>
+				<p style="font-weight: 300">Admins have the ability to assign tasks to multiple users, as well as set rewards for them at certain point values. It is the admin's resposiblity to keep track of all users, tasks, and rewards.</p>
+				<a href="/sign-up" class="btn">Become an Admin</a>
+			</div>
+		</div>
 
-			  </div>
-        </div>
+	</div>
 
-        </div> 
-	</div>	
-            
+</div>	            
 
 </template>

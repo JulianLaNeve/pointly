@@ -26,3 +26,4 @@ materialize:materialize
 utilities:avatar
 cfs:standard-packages
 cfs:filesystem
+chrisbutler:typed.js
