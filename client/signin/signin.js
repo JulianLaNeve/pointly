@@ -12,5 +12,10 @@ Template.signin.events({
 				Materialize.toast(err, 3000)
 			}
 		});
+
+		Meteor.loginWithPassword(email, password)
+	
+
+		Router.go('dashboard');
 	}
 })
