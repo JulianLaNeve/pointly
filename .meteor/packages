@@ -24,3 +24,5 @@ accounts-password
 iron:router
 materialize:materialize
 utilities:avatar
+cfs:standard-packages
+cfs:filesystem

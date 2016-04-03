@@ -9,16 +9,26 @@ Template.signup.events({
 			return;
 		}
 
-		Accounts.createUser({
-			username: first + last,
-			email: email,
-			password: password,
-			profile: {
-				first: first,
-				last: last
-			}
+		var files = $('input[type="file"]').prop("files");
+		console.log(files[0]);
+
+		var fileId = Images.insert(files[0], function(err, fileObj) {
+			if (err) {
+				console.log(err);
+			} else {
+				Accounts.createUser({
+					username: first + last,
+					email: email,
+					password: password,
+					profile: {
+						first: first,
+						last: last,
+						imageId: fileObj._id
+					}
+				});
+			};
 		});
 
-		Router.go('/add')
+		Router.go('/dashboard')
 	}
 })
